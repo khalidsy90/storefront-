@@ -20,7 +20,7 @@ The following user/developer stories detail the major functionality for this pha
 
 3.  As a user, I want a clean, easy to use user interface so that I can shop the online store with confidence
 
-[**Netlify**]()
+**Links** : [**Netlify**](https://nervous-euclid-9c02fa.netlify.app/)
 
 ## UML :
 
