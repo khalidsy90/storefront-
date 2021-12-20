@@ -28,8 +28,8 @@ The following user/developer stories detail the major functionality for this pha
 
 ## result /lab 36 :
 
-![img](/assets/lab36-result.png)
+![img](assets/lab36-result.jpg)
 
-![img](/assets/lab36-result2.png)
+![img](/assets/lab36-result2.jpg)
 
-![img](/assets/lab36-result3.png)
+![img](/assets/lab36-result3.jpg)
