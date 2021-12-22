@@ -51,6 +51,7 @@ The user stories from Phases 1 and 2 remain unchanged. For this phase, we are no
 
 ## Links and Resources:
 
+[Netlify](https://61c2962c3d6bb6cbcd8e7c7d--hopeful-villani-4cbce6.netlify.app/)
 [store-server-Heroku](https://khalidstore.herokuapp.com/)
 
 - ### [store-server-repo](https://github.com/khalidsy90/-store-server)
