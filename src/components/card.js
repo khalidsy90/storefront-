@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart } from '../reducer/actions';
 import { updateInStockHandler } from '../reducer/actions';
 
 const useStyles = makeStyles({
@@ -26,14 +25,14 @@ export default function MediaCard(props) {
   const dispatch = useDispatch();
   function addToCartHandler(productName) {
     let prodObj;
-    // console.log('state.prod.products before', state.prod.products);
+  
     state.prod.products.map((p) => (p.name == productName ? (prodObj = p) : false));
     let inStock = prodObj.inStock;
-    // console.log('inStock', inStock);
+  
     if (!state.cart.cartProducts.includes(productName) && inStock > 0) {
       prodObj.inStock = prodObj.inStock - 1;
       dispatch(updateInStockHandler(prodObj, 'add'));
-      // console.log('state.prod.products after', state.prod.products);
+      
     }
   }
   return (

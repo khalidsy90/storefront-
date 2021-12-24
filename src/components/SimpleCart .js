@@ -8,7 +8,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import * as actions from '../reducer/actions';
-
+import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
@@ -83,9 +83,7 @@ const Cart = props => {
                 <Typography gutterBottom variant="h5" component="h2">
                   {product.name}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {product.description}
-                </Typography>
+              
               </CardContent>
             </CardActionArea>
             <CardActions>
@@ -96,6 +94,11 @@ const Cart = props => {
           </Card>
           )
         })}
+          <Link to='/checkout'>
+          <Button size="large" color="primary">
+            CHECKOUT
+          </Button>
+        </Link>
       </Popover>
     </section>
   )

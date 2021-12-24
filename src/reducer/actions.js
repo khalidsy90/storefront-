@@ -4,39 +4,39 @@ let api = 'https://khalidstore.herokuapp.com/product';
 let apiCart = 'https://khalidstore.herokuapp.com/cartItem';
 
 export const getRemoteData = () => dispatch => {
-  return superagent.get(api)
+    return superagent.get(api)
+      .then(response => {
+        dispatch(getAction(response.body))
+      }).catch(err => console.log(err.message))
+  }
+  
+  export const getCartData = () => dispatch => {
+    return superagent.get(apiCart)
+      .then(response => {
+        dispatch(getCart(response.body))
+      }).catch(err => console.log(err.message))
+  }
+  
+  export const getElectronics = () => dispatch => {
+    return superagent.get(api)
     .then(response => {
-      dispatch(getAction(response.body))
+      dispatch(electronics(response.body))
     }).catch(err => console.log(err.message))
-}
-
-export const getCartData = () => dispatch => {
-  return superagent.get(apiCart)
+  }
+  
+  export const getFood = () => dispatch => {
+    return superagent.get(api)
     .then(response => {
-      dispatch(getCart(response.body))
+      dispatch(food(response.body))
     }).catch(err => console.log(err.message))
-}
-
-export const getElectronics = () => dispatch => {
-  return superagent.get(api)
-  .then(response => {
-    dispatch(electronics(response.body))
-  }).catch(err => console.log(err.message))
-}
-
-export const getFood = () => dispatch => {
-  return superagent.get(api)
-  .then(response => {
-    dispatch(food(response.body))
-  }).catch(err => console.log(err.message))
-}
-
-export const putRemoteData = (id, data) => async dispatch => {
+  }
+  
+  export const putRemoteData = (id, data) => async dispatch => {
     try{
       let getCartResponse = await superagent.get(apiCart);
       let cartContainsItem = false;
       getCartResponse.body.forEach(item => {
-        if(item._id === id){
+        if(item.id === id){
           cartContainsItem = true;
         }
       })
@@ -62,45 +62,45 @@ export const putRemoteData = (id, data) => async dispatch => {
     } catch(err) { console.log(err.message)
     };
   }
-
-export const getAction = data => {
-  return {
-    type: 'GET',
-    payload: data
+  
+  export const getAction = data => {
+    return {
+      type: 'GET',
+      payload: data
+    }
   }
-}
-
-export const getCart = data => {
-  return {
-    type: 'GETCART',
-    payload: data
+  
+  export const getCart = data => {
+    return {
+      type: 'GETCART',
+      payload: data
+    }
   }
-}
-
-export const addToCart = (product) => {
-  return {
-    type: 'ADDCART',
-    payload: product
+  
+  export const addToCart = (product) => {
+    return {
+      type: 'ADDCART',
+      payload: product
+    }
   }
-}
-
-export const removeFromCart = (product) => {
-  return {
-    type: 'REMOVECART',
-    payload: product
+  
+  export const removeFromCart = (product) => {
+    return {
+      type: 'REMOVECART',
+      payload: product
+    }
   }
-}
-
-export const food = (data) => {
-  return {
-    type: 'FOOD',
-    payload: data
+  
+  export const food = (data) => {
+    return {
+      type: 'FOOD',
+      payload: data
+    }
   }
-}
-
-export const electronics = (data) => {
-  return {
-    type: 'ELECTRONICS',
-    payload: data
+  
+  export const electronics = (data) => {
+    return {
+      type: 'ELECTRONICS',
+      payload: data
+    }
   }
-}
