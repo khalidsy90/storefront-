@@ -75,6 +75,8 @@ The user stories from Phases 1, 2 and 3 remain unchanged. For this phase, we are
 
 ## Links and Resources:
 
+[Netlify](https://wonderful-hawking-7cc164.netlify.app/)
+
 - ### [store-server-Heroku](https://khalidstore.herokuapp.com/)
 
 - ### [store-server-repo](https://github.com/khalidsy90/-store-server)
