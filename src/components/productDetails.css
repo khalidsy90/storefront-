@@ -1,0 +1,36 @@
+.prod {
+    margin-top: 3rem;
+  }
+  
+  #item-title {
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .quantity {
+    font-weight: 900;
+  }
+  
+  #suggestions {
+    margin: auto;
+    max-width: 640px;
+  }
+  
+  #details {
+    margin: auto;
+    max-width: 640px;
+    margin-bottom: 3rem;
+  }
+
+  #card1 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: solid;
+  }
+
+  #card2 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+   
+  }

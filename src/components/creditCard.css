@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300&display=swap');
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+ 
+ 
+  margin-right: 400px;
+
+}
+
+
+.checkout{
+    font-family:  sans-serif; 
+    font-size: 20px;
+    color: black;
+}
+
+#container{
+    margin-left: -40px;
+}
